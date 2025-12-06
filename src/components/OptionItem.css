@@ -1,0 +1,7 @@
+.option-item {
+  font-size: 1.1rem;
+  padding: var(--spacing-xs);
+  margin: 4px 0;
+  transition: all var(--transition-speed);
+  position: relative;
+}

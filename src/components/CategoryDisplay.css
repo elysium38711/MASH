@@ -1,0 +1,21 @@
+.category-display {
+  background-color: white;
+  border: 2px solid var(--ink-primary);
+  border-radius: 8px;
+  padding: var(--spacing-md);
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.category-title {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--ink-primary);
+  border-bottom: 2px solid var(--ink-primary);
+  padding-bottom: var(--spacing-xs);
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+}

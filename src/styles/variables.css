@@ -1,0 +1,29 @@
+:root {
+  /* Colors */
+  --paper-bg: #f8f4e6;
+  --paper-line: #9dbfdf;
+  --paper-margin: #d4636f;
+  --ink-primary: #2e3440;
+  --ink-secondary: #4c566a;
+  --highlight-yellow: #fff9c4;
+  --button-bg: #e8dcc4;
+  --button-hover: #d4c4a8;
+  --modal-overlay: rgba(0, 0, 0, 0.7);
+
+  /* Fonts */
+  --font-handwritten: 'Georgia', 'Times New Roman', serif;
+  --font-title: 'Arial', 'Helvetica', sans-serif;
+
+  /* Spacing */
+  --line-height: 32px;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+
+  /* Animation */
+  --elimination-duration: 150ms;
+  --strike-color: #d4636f;
+  --transition-speed: 0.3s;
+}

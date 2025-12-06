@@ -1,0 +1,62 @@
+.dice-roller {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  padding: clamp(24px, 3vh, 40px);
+  background-color: white;
+  border: 3px solid var(--ink-primary);
+  border-radius: 12px;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dice-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  margin-bottom: var(--spacing-md);
+  color: var(--ink-primary);
+}
+
+.dice-display {
+  width: clamp(100px, 15vw, 150px);
+  height: clamp(100px, 15vw, 150px);
+  margin: 0 auto var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-family: var(--font-title);
+  background-color: white;
+  border: 3px solid var(--ink-primary);
+  border-radius: 12px;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  color: var(--paper-margin);
+}
+
+.dice-result {
+  font-family: var(--font-handwritten);
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  margin-bottom: var(--spacing-md);
+  color: var(--ink-primary);
+  font-weight: bold;
+}
+
+.roll-button {
+  font-size: clamp(1.3rem, 1.8vw, 1.6rem);
+  padding: clamp(16px, 2vh, 24px) clamp(32px, 4vw, 48px);
+  background-color: #ffd6a5;
+}
+
+.roll-button:hover:not(:disabled) {
+  background-color: #ffbe7b;
+}
+
+@media (max-width: 768px) {
+  .dice-title {
+    font-size: 1.5rem;
+  }
+
+  .dice-display {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+  }
+}

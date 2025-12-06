@@ -1,0 +1,112 @@
+@import './variables.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-handwritten);
+  color: var(--ink-primary);
+  line-height: 1.6;
+}
+
+.notebook-paper {
+  background-color: var(--paper-bg);
+  background-image:
+    linear-gradient(90deg, var(--paper-margin) 2px, transparent 2px),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent calc(var(--line-height) - 1px),
+      var(--paper-line) calc(var(--line-height) - 1px),
+      var(--paper-line) var(--line-height)
+    );
+  background-size: 60px 100%, 100% var(--line-height);
+  background-position: 0 0, 0 8px;
+  min-height: 100vh;
+  padding: var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .notebook-paper {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .notebook-paper {
+    padding: var(--spacing-md);
+    background-size: 40px 100%, 100% 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notebook-paper {
+    padding: var(--spacing-sm);
+  }
+}
+
+.handwritten-title {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  color: var(--ink-primary);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .handwritten-title {
+    font-size: 2rem;
+  }
+}
+
+button {
+  font-family: var(--font-handwritten);
+  font-size: 1.1rem;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--button-bg);
+  border: 2px solid var(--ink-primary);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--button-hover);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+button:active:not(:disabled) {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input[type="text"],
+textarea {
+  font-family: var(--font-handwritten);
+  font-size: 1rem;
+  padding: var(--spacing-xs);
+  border: 2px solid var(--ink-primary);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: border-color var(--transition-speed);
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--paper-margin);
+}

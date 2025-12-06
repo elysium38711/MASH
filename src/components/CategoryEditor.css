@@ -1,0 +1,163 @@
+.category-editor {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-editor-title {
+  font-family: 'Cinzel', 'Libre Baskerville', 'Georgia', serif;
+  font-size: clamp(2.7rem, 4vw, 3.5rem);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  color: var(--ink-primary);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: clamp(20px, 3vh, 32px) clamp(40px, 5vw, 60px);
+  border: 3px solid var(--ink-primary);
+  border-radius: 12px;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.categories-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  width: 100%;
+}
+
+.category-card {
+  background-color: white;
+  border: 2px solid var(--ink-primary);
+  border-radius: 8px;
+  padding: clamp(24px, 3vh, 40px) clamp(24px, 2vw, 32px);
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.category-name-input {
+  font-family: 'Libre Baskerville', 'Georgia', serif;
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  flex: 1;
+  border: none;
+  border-bottom: 2px solid var(--ink-primary);
+  background: transparent;
+  padding: var(--spacing-xs) 0;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.category-name {
+  font-family: 'Libre Baskerville', 'Georgia', serif;
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  flex: 1;
+  color: var(--ink-primary);
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.remove-button {
+  padding: var(--spacing-xs);
+  font-size: 1.2rem;
+  min-width: 32px;
+  background-color: var(--paper-margin);
+  color: white;
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+}
+
+.option-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.option-input {
+  flex: 1;
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  padding: clamp(10px, 1.5vh, 14px);
+  text-align: center;
+  font-family: 'Garamond', 'Palatino', 'Book Antiqua', serif;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.option-text {
+  flex: 1;
+  padding: clamp(10px, 1.5vh, 14px);
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  text-align: center;
+  font-family: 'Garamond', 'Palatino', 'Book Antiqua', serif;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.remove-option-button {
+  padding: 4px 12px;
+  font-size: 1.3rem;
+  min-width: 32px;
+  background-color: var(--ink-secondary);
+  color: white;
+}
+
+.add-option-button {
+  width: 100%;
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  padding: clamp(14px, 2vh, 18px);
+}
+
+.editor-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+.add-category-button,
+.start-game-button {
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  padding: clamp(16px, 2vh, 24px) clamp(32px, 4vw, 48px);
+}
+
+.start-game-button {
+  background-color: #a8d5ba;
+}
+
+.start-game-button:hover {
+  background-color: #8fc4a4;
+}
+
+@media (max-width: 768px) {
+  .categories-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+  }
+
+  .editor-actions {
+    flex-direction: column;
+  }
+
+  .add-category-button,
+  .start-game-button {
+    width: 100%;
+  }
+}

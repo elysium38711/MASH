@@ -9,7 +9,11 @@
       "Bash(npm run dev:*)",
       "Bash(timeout 5 npm run dev:*)",
       "Bash(npm run build:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(ls:*)",
+      "Bash(git add:*)",
+      "Bash(cat:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []

@@ -8,6 +8,8 @@ export const DEFAULT_MASH_CATEGORIES: Omit<Category, 'id'>[] = [
       { id: 'home-2', text: 'Apartment', eliminated: false },
       { id: 'home-3', text: 'Shack', eliminated: false },
       { id: 'home-4', text: 'House', eliminated: false },
+      { id: 'home-5', text: 'Island', eliminated: false },
+      { id: 'home-6', text: 'Treehouse', eliminated: false },
     ],
   },
   {

@@ -13,7 +13,10 @@
       "Bash(ls:*)",
       "Bash(git add:*)",
       "Bash(cat:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(npx tsc:*)",
+      "Bash(bash \"C:\\\\Users\\\\Andrew\\\\.claude\\\\plugins\\\\cache\\\\claude-plugins-official\\\\superpowers\\\\5.0.2\\\\skills\\\\brainstorming\\\\scripts\\\\start-server.sh\" --project-dir \"Y:\\\\Carlys Apps\\\\MASH\")",
+      "Bash(bash \"C:\\\\Users\\\\Andrew\\\\.claude\\\\plugins\\\\cache\\\\claude-plugins-official\\\\superpowers\\\\5.0.2\\\\skills\\\\brainstorming\\\\scripts\\\\stop-server.sh\" \"Y:\\\\\\\\Carlys Apps\\\\\\\\MASH/.superpowers/brainstorm/1463-1773450868\")"
     ],
     "deny": [],
     "ask": []

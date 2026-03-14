@@ -1,0 +1,56 @@
+<h2>MASH-IT Rebrand Design</h2>
+<p class="subtitle">Mansion &bull; Apartment &bull; Shack &bull; House &bull; Island &bull; Treehouse</p>
+
+<div class="section">
+  <h3>Changes Overview</h3>
+
+  <div class="options">
+    <div class="option" data-choice="title" onclick="toggleSelect(this)">
+      <div class="letter">1</div>
+      <div class="content">
+        <h3>Title Rename</h3>
+        <p><strong>GameModeSelector.tsx</strong> &mdash; Change "MASH" &rarr; "MASH-IT" in the h1 title. Simple one-line change.</p>
+      </div>
+    </div>
+
+    <div class="option" data-choice="defaults" onclick="toggleSelect(this)">
+      <div class="letter">2</div>
+      <div class="content">
+        <h3>Default Home Category</h3>
+        <p><strong>defaultCategories.ts</strong> &mdash; Add "Island" and "Treehouse" to the Home options (4 &rarr; 6 options).</p>
+      </div>
+    </div>
+
+    <div class="option" data-choice="pool" onclick="toggleSelect(this)">
+      <div class="letter">3</div>
+      <div class="content">
+        <h3>Home Random Pool</h3>
+        <p><strong>randomChoicePools.ts</strong> &mdash; Add a "Home" pool with ~30+ housing types. Update <code>getRandomChoices()</code> to guarantee the 6 MASH-IT options are always included, then fill remaining slots from the pool.</p>
+      </div>
+    </div>
+
+    <div class="option" data-choice="randomize" onclick="toggleSelect(this)">
+      <div class="letter">4</div>
+      <div class="content">
+        <h3>Enable Home Randomization</h3>
+        <p><strong>CategoryEditor.tsx</strong> &mdash; Remove the "skip Home" guard in <code>handleRandomizeChoices()</code> so Home can be randomized too (with guaranteed MASH-IT options).</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Home Category After Update</h3>
+  <div class="mockup">
+    <div class="mockup-header">Default Home Options (always present)</div>
+    <div class="mockup-body" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 16px;">
+      <div style="background: #e8f5e9; padding: 12px; border-radius: 8px; text-align: center; font-weight: bold;">🏰 Mansion</div>
+      <div style="background: #e3f2fd; padding: 12px; border-radius: 8px; text-align: center; font-weight: bold;">🏢 Apartment</div>
+      <div style="background: #fbe9e7; padding: 12px; border-radius: 8px; text-align: center; font-weight: bold;">🛖 Shack</div>
+      <div style="background: #fff3e0; padding: 12px; border-radius: 8px; text-align: center; font-weight: bold;">🏠 House</div>
+      <div style="background: #e0f7fa; padding: 12px; border-radius: 8px; text-align: center; font-weight: bold;">🏝️ Island</div>
+      <div style="background: #f1f8e9; padding: 12px; border-radius: 8px; text-align: center; font-weight: bold;">🌳 Treehouse</div>
+    </div>
+  </div>
+  <p style="margin-top: 12px; color: #666;">When randomized: these 6 are always included + extras drawn from the pool (e.g., Penthouse, RV, Castle, Houseboat...)</p>
+</div>

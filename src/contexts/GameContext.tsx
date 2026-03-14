@@ -45,7 +45,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
     }
 
     setGameState(prev => ({ ...prev, categories: initialCategories }));
-    setPhase('category-editor');
+    // Phase transitions now handled by router navigation
   };
 
   const setCategories = (categories: Category[]) => {
@@ -89,14 +89,12 @@ export function GameProvider({ children }: { children: ReactNode }) {
 
   const setIsComplete = (value: boolean) => {
     setGameState(prev => ({ ...prev, isComplete: value }));
-    if (value) {
-      setPhase('results');
-    }
+    // Phase transitions now handled by router navigation
   };
 
   const resetGame = () => {
     setGameState(initialGameState);
-    setPhase('mode-selection');
+    // Phase transitions now handled by router navigation
   };
 
   const contextValue: GameContextValue = {

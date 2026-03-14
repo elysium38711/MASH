@@ -4,6 +4,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
+}
+
+.dice-icon-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 40px;
+  background: white;
+  border: 3px solid var(--ink-primary);
+  border-radius: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dice-icon-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dice-icon-button:active {
+  transform: translate(0, 0);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 .category-editor-title {
@@ -25,7 +51,7 @@
 
 .categories-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--spacing-lg);
   margin-bottom: var(--spacing-lg);
   width: 100%;
@@ -132,10 +158,19 @@
   margin-top: var(--spacing-xl);
 }
 
+.home-button,
 .add-category-button,
 .start-game-button {
   font-size: clamp(1.2rem, 1.8vw, 1.5rem);
   padding: clamp(16px, 2vh, 24px) clamp(32px, 4vw, 48px);
+}
+
+.home-button {
+  background-color: #e0e0e0;
+}
+
+.home-button:hover {
+  background-color: #c8c8c8;
 }
 
 .start-game-button {
@@ -147,17 +182,119 @@
 }
 
 @media (max-width: 768px) {
+  .dice-icon-button {
+    position: static;
+    display: block;
+    margin: 0 auto var(--spacing-md);
+    font-size: 36px;
+  }
+
   .categories-container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-sm);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-xs);
+  }
+
+  .category-card {
+    padding: var(--spacing-sm);
   }
 
   .editor-actions {
     flex-direction: column;
   }
 
+  .home-button,
   .add-category-button,
   .start-game-button {
     width: 100%;
   }
+}
+
+@media (max-width: 480px) {
+  .categories-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Error Modal */
+.error-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.error-modal {
+  background-color: white;
+  border: 3px solid var(--ink-primary);
+  border-radius: 12px;
+  padding: clamp(24px, 4vh, 40px) clamp(32px, 5vw, 60px);
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  animation: slideIn 0.2s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.error-modal-title {
+  font-family: 'Cinzel', 'Libre Baskerville', 'Georgia', serif;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  color: var(--paper-margin);
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.error-modal-message {
+  font-family: 'Libre Baskerville', 'Georgia', serif;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: var(--ink-primary);
+  margin: 0 0 var(--spacing-lg) 0;
+  line-height: 1.5;
+}
+
+.error-modal-button {
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  padding: clamp(12px, 2vh, 16px) clamp(40px, 6vw, 60px);
+  background-color: var(--paper-margin);
+  color: white;
+  border: 2px solid var(--ink-primary);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.error-modal-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.error-modal-button:active {
+  transform: translate(0, 0);
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 }

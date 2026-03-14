@@ -1,0 +1,58 @@
+.results-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-xl);
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border: 3px solid var(--ink-primary);
+  border-radius: 12px;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.results-title {
+  font-family: 'Cinzel', 'Libre Baskerville', 'Georgia', serif;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  color: var(--ink-primary);
+}
+
+.results-display .results-list {
+  width: 100%;
+  margin-bottom: var(--spacing-xl);
+}
+
+.results-display .result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--ink-secondary);
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.results-display .result-category {
+  font-weight: bold;
+  color: var(--ink-primary);
+  font-family: 'Libre Baskerville', 'Georgia', serif;
+}
+
+.results-display .result-value {
+  font-style: italic;
+  color: var(--ink-secondary);
+  font-family: 'Garamond', 'Palatino', 'Book Antiqua', serif;
+}
+
+.results-display .play-again-button {
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  padding: clamp(16px, 2vh, 24px) clamp(32px, 4vw, 48px);
+  background-color: #a8d5ba;
+}
+
+.results-display .play-again-button:hover {
+  background-color: #8fc4a4;
+}

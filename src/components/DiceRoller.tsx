@@ -1,30 +1,14 @@
-import { useState } from 'react';
-import { animatedDiceRoll } from '../utils/randomDice';
 import './DiceRoller.css';
 
 interface DiceRollerProps {
-  onRollComplete: (value: number) => void;
+  diceValue: number | null;
+  isRolling: boolean;
+  lastRoll: number | null;
+  onRoll: () => void;
   disabled: boolean;
 }
 
-export function DiceRoller({ onRollComplete, disabled }: DiceRollerProps) {
-  const [diceValue, setDiceValue] = useState<number | null>(null);
-  const [isRolling, setIsRolling] = useState(false);
-  const [lastRoll, setLastRoll] = useState<number | null>(null);
-
-  const handleRoll = async () => {
-    setIsRolling(true);
-
-    const finalValue = await animatedDiceRoll(
-      (value) => setDiceValue(value),
-      1500
-    );
-
-    setIsRolling(false);
-    setLastRoll(finalValue);
-    onRollComplete(finalValue);
-  };
-
+export function DiceRoller({ diceValue, isRolling, lastRoll, onRoll, disabled }: DiceRollerProps) {
   return (
     <div className="dice-roller">
       <h2 className="dice-title">Roll the Die</h2>
@@ -35,8 +19,8 @@ export function DiceRoller({ onRollComplete, disabled }: DiceRollerProps) {
         <p className="dice-result">You rolled a {lastRoll}!</p>
       )}
       <button
-        onClick={handleRoll}
-        disabled={disabled || isRolling}
+        onClick={onRoll}
+        disabled={disabled}
         className="roll-button"
       >
         {isRolling ? 'Rolling...' : 'Roll D20'}

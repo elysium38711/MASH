@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- House roof -->
+  <polygon points="16,2 2,14 6,14 6,28 26,28 26,14 30,14" fill="#8B5CF6" stroke="#6D28D9" stroke-width="1"/>
+  <!-- Door -->
+  <rect x="13" y="18" width="6" height="10" rx="1" fill="#FDE68A"/>
+  <!-- Window left -->
+  <rect x="7" y="16" width="4" height="4" rx="0.5" fill="#FDE68A"/>
+  <!-- Window right -->
+  <rect x="21" y="16" width="4" height="4" rx="0.5" fill="#FDE68A"/>
+  <!-- Stylized M on roof -->
+  <text x="16" y="13" text-anchor="middle" font-family="serif" font-weight="bold" font-size="8" fill="#FDE68A">M</text>
+</svg>
